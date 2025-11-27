@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>الهمسات — لعبة قصيرة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<header class="site-header">
+  <h1>الهمسات</h1>
+  <p class="tag">لعبة قصيرة رعب — اتبع الهمسات... إن استطعت</p>
+  <div class="controls-row">
+    <button id="playBtn" class="btn primary">تشغيل اللعبة</button>
+    <button id="soundToggle" class="btn">إيقاف/تشغيل أصوات</button>
+    <a class="btn ghost" href="#about">عن اللعبة</a>
+  </div>
+</header>
+
+<main id="main">
+  <section id="gameWrap" class="hidden">
+    <div id="hud">
+      <div id="status">الموقع: القرية → الغابة</div>
+      <div id="hint">استخدم الأسهم / WASD أو السحب على الهاتف للحركة</div>
+      <div id="distance">الهمس: —</div>
+    </div>
+    <canvas id="game" width="900" height="600"></canvas>
+    <div id="mobileControls" class="mobile-only">
+      <button id="up">▲</button>
+      <div class="midrow"><button id="left">◄</button><button id="down">▼</button><button id="right">►</button></div>
+    </div>
+  </section>
+
+  <section id="about" class="panel">
+    <h2>عن اللعبة</h2>
+    <p>لعبة قصيرة مبنية على فكرة استبدال النسخة.</p>
+    <ul>
+      <li>صفحة هبوط + لعبة مدمجة (embedded) مناسبة للهواتف.</li>
+      <li>تركيز على الجوّ، الإضاءة، والهمسات.</li>
+      <li>نهاية صادمة — تبدّل هويتك.</li>
+    </ul>
+    <h3>ملاحظات تقنية</h3>
+    <p>هذه نسخة خفيفة — الأصوات مولّدة برمجياً، والبيئة بسيطة لتعمل على متصفحات الهاتف.</p>
+    <p>لتحميل الموقع، افتح الملف المرفق أو انسخ الشفرة.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© تصميم سريع — يمكنك التعديل أو إضافة أصوات حقيقية. النهاية الصادمة مقدّمة للاختبار.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

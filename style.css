@@ -1,0 +1,48 @@
+:root{
+  --bg:#0b0b0d;
+  --panel:#0f1113;
+  --muted:#9aa0a6;
+  --accent:#d9a94b;
+  --danger:#cc4444;
+  --glass: rgba(255,255,255,0.03);
+  --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box;font-family:var(--font-sans);}
+body.dark{background:linear-gradient(180deg,var(--bg),#050506);color:#e8e8e8;margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
+.site-header{width:100%;max-width:980px;padding:28px 20px 12px;text-align:center;}
+.site-header h1{margin:0;font-size:2.2rem;letter-spacing:1px;}
+.tag{color:var(--muted);margin-top:6px;}
+.controls-row{margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:8px;color:inherit;cursor:pointer;}
+.btn.primary{background:linear-gradient(90deg,#2b2b2f,#19191b);border:1px solid rgba(217,169,75,0.25);box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+.btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,0.03);}
+.main{max-width:980px;width:100%;}
+
+/* Game area */
+#gameWrap{width:100%;max-width:980px;margin:18px auto;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:8px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6);position:relative;}
+#game{display:block;width:100%;height:auto;border-radius:8px;background:#000;touch-action:none;}
+
+/* HUD */
+#hud{position:absolute;left:12px;top:12px;background:rgba(0,0,0,0.45);padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:0.95rem;}
+#hud #status{font-weight:600;}
+#hud #hint{color:var(--muted);font-size:0.85rem;margin-top:4px;}
+#hud #distance{margin-top:6px;color:var(--accent);font-weight:700;}
+
+/* panels */
+.panel{width:100%;max-width:980px;padding:18px;margin:14px auto;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02);}
+.site-footer{margin:20px 0 40px;color:var(--muted);font-size:0.85rem;text-align:center;}
+
+/* Mobile controls */
+.mobile-only{display:none;}
+#mobileControls{position:relative;margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:8px;}
+#mobileControls button{width:54px;height:54px;border-radius:12px;border:none;background:rgba(255,255,255,0.03);color:inherit;font-size:1.1rem;}
+
+.hidden{display:none;}
+
+/* Responsive */
+@media (max-width:760px){
+  #game{height:420px;}
+  .mobile-only{display:block;}
+  .site-header h1{font-size:1.8rem;}
+  #main{padding:0 12px;}
+}
